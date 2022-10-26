@@ -1,0 +1,11 @@
+batch_size: 8
+data_name: german
+data_path: data/german_data
+epochs: 1500
+load_weights: ''
+log_file: log
+lr: 0.0001
+model: CNN
+nb_classes: 43
+save_epoch: 1
+weight_decay: 1.0e-05
