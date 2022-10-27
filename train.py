@@ -70,7 +70,7 @@ if __name__=="__main__":
     
     start_epoch = 0
     args= parser()
-    cfg = calculate_nb_classes(args.cfg, args.t)
+    cfg = calculate_nb_classes(args.cfg, args.train_list_path)
     
     dataroot= cfg['data_path']  
     DATA_NAME = cfg['data_name']

@@ -24,7 +24,7 @@ def write_yaml(yaml_dict: dict, yaml_f):
 def parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--cfg",type=str, required=True)
-    parser.add_argument("--train_list_path", "-t",type=str, required=True)
+    parser.add_argument("--train_list_path",type=str, required=True)
     args = parser.parse_args()
     return args
 
