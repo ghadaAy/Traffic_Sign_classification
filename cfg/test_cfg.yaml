@@ -2,7 +2,7 @@ batch_size: 8
 data_name: german
 data_path: data/german_data
 epochs: 1500
-load_weights: null
+load_weights: D:\Transport\log\model_13.pth
 log_file: log
 lr: 0.0001
 model: CNN

@@ -48,4 +48,6 @@ class Signs(Dataset):
         if self.model_name=='CNN':
             img= np.transpose(img, (2, 0, 1))
         img = img.astype('float')
+        if self.split=='test':
+            return img_path, torch.tensor(img, dtype=torch.float32) , label
         return torch.tensor(img, dtype=torch.float32) , label

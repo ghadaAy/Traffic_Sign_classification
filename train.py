@@ -1,3 +1,4 @@
+from configparser import NoOptionError
 import logging
 import torch
 from dataset import Signs
@@ -105,7 +106,7 @@ if __name__=="__main__":
     optimizer = optim.Adam(net.parameters(), lr=lr, eps=1e-07)
     criterion = nn.CrossEntropyLoss()
     
-    if load_weights!='':
+    if load_weights!=None:
         start_epoch, loss = read_checkpoint(load_weights, net, optimizer)
         df = pd.read_csv(os.path.join(log_file,"loss_acc.csv")).head(start_epoch+1)
         running_val_loss, running_val_acc= list(df['validation_loss']),list(df['validation accuracy'])
