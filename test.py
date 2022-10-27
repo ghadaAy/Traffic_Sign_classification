@@ -30,6 +30,7 @@ def test():
     epoch_loss = train_loss/counter
     epoch_acc = train_correct/len(test_dataloader.dataset)*100
     
+    return epoch_loss, epoch_acc
 
 if __name__=="__main__":
     
@@ -73,4 +74,5 @@ if __name__=="__main__":
     logging.info(f'{load_weights} loaded')
     
     for epoch in range(1):
-        test()
+        path, epoch_loss, epoch_acc = test()
+        print("loss=",epoch_loss,"accuracy=", epoch_acc)
