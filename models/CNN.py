@@ -21,8 +21,7 @@ class Model(nn.Module):
         nb=576
         self.lin1 = nn.Linear(nb, 576)
         self.lin2 = nn.Linear(576, nb_classes)
-        self.lin3 = nn.Linear(576, 576)
-        self.lin4 = nn.Linear(576, nb_classes)
+      
         self.softmax = nn.Softmax(dim=1)
         self.Lrelu = nn.LeakyReLU()
         
@@ -39,7 +38,6 @@ class Model(nn.Module):
         x = torch.flatten(x, 1)
         x = self.lin1(x)
         x = self.tan(x)
-        x = self.dropout(x)
         x = self.dropout(x)
         x = self.lin2(x)
         x = self.softmax(x)
